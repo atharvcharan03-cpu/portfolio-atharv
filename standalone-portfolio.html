@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atharv Jagawat | B.Tech CSE Student & AI Enthusiast</title>
+  <meta name="description" content="Personal portfolio of Atharv Jagawat, B.Tech CSE student at JECRC University, Jaipur. Exploring AI, web development, and digital productivity." />
+  
+  <!-- Favicon: AJ monogram -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='100%25' stop-color='%233b82f6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ctext x='50%25' y='60%25' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='42' fill='white'%3EAJ%3C/text%3E%3C/svg%3E" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f5ff',
+              100: '#e0ebff',
+              500: '#4361ee',
+              600: '#3042e3',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+    .radial-glow {
+      background: radial-gradient(circle at 50% 20%, rgba(99, 102, 241, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 dark:bg-slate-900 dark:text-slate-100 antialiased selection:bg-indigo-500/30 selection:text-indigo-200 transition-colors duration-200">
+
+  <!-- ================= NAVBAR ================= -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-cyan-400 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+            AJ
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-slate-100 group-hover:text-indigo-400 transition-colors text-base tracking-tight">
+              Atharv Jagawat
+            </span>
+            <span class="text-xs text-indigo-400 font-medium">
+              B.Tech CSE Student
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-1 bg-slate-800/60 border border-slate-700/50 px-3 py-1.5 rounded-full backdrop-blur-sm">
+          <a href="#home" class="nav-link px-3.5 py-1.5 text-xs lg:text-sm font-medium rounded-full text-slate-300 hover:text-white hover:bg-slate-700/50 transition-all">Home</a>
+          <a href="#about" class="nav-link px-3.5 py-1.5 text-xs lg:text-sm font-medium rounded-full text-slate-300 hover:text-white hover:bg-slate-700/50 transition-all">About</a>
+          <a href="#education" class="nav-link px-3.5 py-1.5 text-xs lg:text-sm font-medium rounded-full text-slate-300 hover:text-white hover:bg-slate-700/50 transition-all">Education</a>
+          <a href="#skills" class="nav-link px-3.5 py-1.5 text-xs lg:text-sm font-medium rounded-full text-slate-300 hover:text-white hover:bg-slate-700/50 transition-all">Skills</a>
+          <a href="#projects" class="nav-link px-3.5 py-1.5 text-xs lg:text-sm font-medium rounded-full text-slate-300 hover:text-white hover:bg-slate-700/50 transition-all">Projects</a>
+          <a href="#achievements" class="nav-link px-3.5 py-1.5 text-xs lg:text-sm font-medium rounded-full text-slate-300 hover:text-white hover:bg-slate-700/50 transition-all">Achievements</a>
+          <a href="#contact" class="nav-link px-3.5 py-1.5 text-xs lg:text-sm font-medium rounded-full text-slate-300 hover:text-white hover:bg-slate-700/50 transition-all">Contact</a>
+        </nav>
+
+        <!-- Social Links & Theme Switcher -->
+        <div class="hidden md:flex items-center gap-2">
+          <a href="https://github.com/atharvcharan03-cpu" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="p-2 rounded-xl text-slate-400 hover:text-slate-100 hover:bg-slate-800 transition-colors">
+            <i data-lucide="github" class="w-5 h-5"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/atharv-jagawat-8827a7441" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="p-2 rounded-xl text-slate-400 hover:text-slate-100 hover:bg-slate-800 transition-colors">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+          </a>
+          <div class="w-px h-5 bg-slate-800 mx-1"></div>
+          <button id="theme-btn" onclick="toggleTheme()" class="p-2 rounded-xl text-slate-400 hover:text-slate-100 bg-slate-800/60 hover:bg-slate-800 transition-colors" title="Toggle Theme">
+            <i id="theme-icon" data-lucide="sun" class="w-5 h-5 text-amber-400"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="flex items-center gap-2 md:hidden">
+          <button onclick="toggleTheme()" class="p-2 rounded-xl text-slate-400 hover:text-slate-100 bg-slate-800/60 transition-colors">
+            <i data-lucide="sun" class="w-5 h-5 text-amber-400"></i>
+          </button>
+          <button id="menu-btn" onclick="toggleMobileMenu()" class="p-2 rounded-xl text-slate-400 hover:text-slate-100 bg-slate-800/60 focus:outline-none" aria-label="Menu">
+            <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-3 pb-6 bg-slate-900 border-b border-slate-800 space-y-1">
+      <a href="#home" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-300 hover:bg-slate-800">Home</a>
+      <a href="#about" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-300 hover:bg-slate-800">About</a>
+      <a href="#education" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-300 hover:bg-slate-800">Education</a>
+      <a href="#skills" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-300 hover:bg-slate-800">Skills</a>
+      <a href="#projects" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-300 hover:bg-slate-800">Projects</a>
+      <a href="#achievements" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-300 hover:bg-slate-800">Achievements</a>
+      <a href="#contact" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-300 hover:bg-slate-800">Contact</a>
+      <div class="pt-3 border-t border-slate-800 flex items-center justify-around">
+        <a href="https://github.com/atharvcharan03-cpu" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs text-slate-300 hover:text-indigo-400">
+          <i data-lucide="github" class="w-4 h-4"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/atharv-jagawat-8827a7441" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs text-slate-300 hover:text-indigo-400">
+          <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section id="home" class="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none -z-10 flex items-center justify-center">
+        <div class="w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <!-- Status Pill -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/60 text-xs sm:text-sm text-slate-300 mb-8 backdrop-blur-sm shadow-sm">
+          <span class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          <span class="font-medium text-emerald-400">Available</span>
+          <span class="text-slate-500">•</span>
+          <span>B.Tech 1st Year @ JECRC University, Jaipur</span>
+        </div>
+
+        <!-- Name -->
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-4">
+          Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-indigo-300 to-cyan-400">Atharv Jagawat</span>
+        </h1>
+
+        <!-- Role Subtitle -->
+        <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-indigo-300/90 mb-6">
+          B.Tech Student | AI & Technology Enthusiast
+        </p>
+
+        <!-- Two-line intro -->
+        <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-300 leading-relaxed mb-10">
+          First-semester Computer Science student exploring artificial intelligence, modern web technologies, and software engineering. Committed to building practical, impact-driven digital solutions.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+          <a href="#projects" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm sm:text-base shadow-lg shadow-indigo-600/30 transition-all duration-200 transform hover:-translate-y-0.5">
+            <span>View Projects</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 text-slate-100 font-semibold text-sm sm:text-base border border-slate-700 transition-all duration-200 transform hover:-translate-y-0.5">
+            <i data-lucide="mail" class="w-4 h-4 text-indigo-400"></i>
+            <span>Contact Me</span>
+          </a>
+        </div>
+
+        <!-- Social Icons under buttons -->
+        <div class="flex items-center justify-center gap-3 pt-2">
+          <span class="text-xs uppercase tracking-wider text-slate-500 font-semibold mr-1">Connect:</span>
+          <a href="https://www.linkedin.com/in/atharv-jagawat-8827a7441" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="p-2 rounded-lg bg-slate-800/70 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-700/60 transition-all">
+            <i data-lucide="linkedin" class="w-4 h-4"></i>
+          </a>
+          <a href="https://github.com/atharvcharan03-cpu" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="p-2 rounded-lg bg-slate-800/70 hover:bg-indigo-600/20 text-slate-300 hover:text-indigo-400 border border-slate-700/60 transition-all">
+            <i data-lucide="github" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="py-20 relative">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center text-center mb-14">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-semibold uppercase tracking-wider mb-3">
+            <i data-lucide="user" class="w-3.5 h-3.5"></i>
+            <span>About Me</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Curious Student, Creative Problem Solver</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-7 space-y-5">
+            <h3 class="text-xl sm:text-2xl font-bold text-slate-100">
+              Building Strong Foundations in CS & Emerging Technologies
+            </h3>
+            <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+              I am a first-semester B.Tech Computer Science student at JECRC University, Jaipur, deeply passionate about technology, artificial intelligence, web development, and digital productivity.
+            </p>
+            <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+              Currently building rock-solid foundations in Python and C programming while actively experimenting with modern AI developer tools and practical web interfaces. I focus on learning by building—turning creative ideas into functional, clean code.
+            </p>
+            <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+              I am actively seeking software development internship opportunities where I can apply my growing technical skills, contribute to real-world projects, and collaborate with passionate developers.
+            </p>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="relative rounded-2xl bg-slate-800/90 border border-slate-700/80 p-6 sm:p-8 shadow-xl">
+              <div class="flex items-center justify-between border-b border-slate-700/60 pb-4 mb-6">
+                <div>
+                  <span class="text-xs text-indigo-400 font-semibold uppercase tracking-wider">Student Profile</span>
+                  <h4 class="text-lg font-bold text-white">Atharv Jagawat</h4>
+                </div>
+                <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  Active Learner
+                </span>
+              </div>
+
+              <div class="space-y-3">
+                <div class="flex items-center justify-between text-xs sm:text-sm py-1 border-b border-slate-800/60">
+                  <span class="text-slate-400">Degree</span>
+                  <span class="text-slate-200 font-semibold">B.Tech CSE Core (1st Year)</span>
+                </div>
+                <div class="flex items-center justify-between text-xs sm:text-sm py-1 border-b border-slate-800/60">
+                  <span class="text-slate-400">University</span>
+                  <span class="text-slate-200 font-semibold">JECRC University, Jaipur</span>
+                </div>
+                <div class="flex items-center justify-between text-xs sm:text-sm py-1 border-b border-slate-800/60">
+                  <span class="text-slate-400">Current Focus</span>
+                  <span class="text-slate-200 font-semibold">Python, C & Modern Web</span>
+                </div>
+                <div class="flex items-center justify-between text-xs sm:text-sm py-1 border-b border-slate-800/60">
+                  <span class="text-slate-400">Interest Areas</span>
+                  <span class="text-slate-200 font-semibold">AI, GenAI & Productivity</span>
+                </div>
+                <div class="flex items-center justify-between text-xs sm:text-sm py-1">
+                  <span class="text-slate-400">Opportunities</span>
+                  <span class="text-emerald-400 font-semibold">Seeking SDE Internships</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section id="education" class="py-20 relative bg-slate-900/50">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center text-center mb-14">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-semibold uppercase tracking-wider mb-3">
+            <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
+            <span>Academic Background</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Education & Learning</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full mt-4"></div>
+        </div>
+
+        <div class="relative rounded-2xl bg-slate-800/60 border border-slate-700/60 p-6 sm:p-10 shadow-xl overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400"></div>
+
+          <div class="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-semibold mb-3">
+                <span>1st Year (1st Semester)</span>
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-bold text-white mb-2">
+                B.Tech in Computer Science & Engineering (CSE Core)
+              </h3>
+              <div class="text-base sm:text-lg font-medium text-slate-300 mb-2">
+                JECRC University, Jaipur
+              </div>
+              <div class="flex items-center gap-4 text-xs sm:text-sm text-slate-400">
+                <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-4 h-4 text-indigo-400"></i> Jaipur, India</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="calendar" class="w-4 h-4 text-indigo-400"></i> 2026 - Present</span>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-2">
+            <i data-lucide="award" class="w-4 h-4 text-indigo-400"></i>
+            Relevant Learning Areas & Current Coursework
+          </h4>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/50 border border-slate-700/50">
+              <div class="w-9 h-9 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="code" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-sm font-bold text-white block">Python</span>
+                <span class="text-[11px] text-slate-400">Programming</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/50 border border-slate-700/50">
+              <div class="w-9 h-9 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="cpu" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-sm font-bold text-white block">C Programming</span>
+                <span class="text-[11px] text-slate-400">Systems & Logic</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/50 border border-slate-700/50">
+              <div class="w-9 h-9 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="globe" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-sm font-bold text-white block">Web Development</span>
+                <span class="text-[11px] text-slate-400">Frontend</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/50 border border-slate-700/50">
+              <div class="w-9 h-9 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="brain" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-sm font-bold text-white block">Artificial Intelligence</span>
+                <span class="text-[11px] text-slate-400">Emerging Tech</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/50 border border-slate-700/50">
+              <div class="w-9 h-9 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check-circle" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-sm font-bold text-white block">Problem Solving</span>
+                <span class="text-[11px] text-slate-400">Foundations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="py-20 relative">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center text-center mb-12">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-semibold uppercase tracking-wider mb-3">
+            <i data-lucide="wrench" class="w-3.5 h-3.5"></i>
+            <span>Technical Capabilities</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Skills & Knowledge Areas</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- HTML -->
+          <div class="group p-5 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-indigo-500/50 transition-all hover:-translate-y-1">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20">
+                <i data-lucide="file-code" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-900/60 text-slate-300">Frontend</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">HTML</h3>
+            <p class="text-xs sm:text-sm text-slate-300/80 leading-relaxed">Semantic markup, accessibility, modern standards, and structural layout.</p>
+          </div>
+
+          <!-- CSS -->
+          <div class="group p-5 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-indigo-500/50 transition-all hover:-translate-y-1">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20">
+                <i data-lucide="palette" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-900/60 text-slate-300">Styling</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">CSS</h3>
+            <p class="text-xs sm:text-sm text-slate-300/80 leading-relaxed">Responsive layouts, Flexbox, CSS Grid, Tailwind CSS, and polished modern styling.</p>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="group p-5 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-indigo-500/50 transition-all hover:-translate-y-1">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20">
+                <i data-lucide="code-2" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-900/60 text-slate-300">Frontend</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">JavaScript</h3>
+            <p class="text-xs sm:text-sm text-slate-300/80 leading-relaxed">ES6+ syntax, asynchronous programming, DOM manipulation, and dynamic interactions.</p>
+          </div>
+
+          <!-- Python -->
+          <div class="group p-5 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-indigo-500/50 transition-all hover:-translate-y-1">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20">
+                <i data-lucide="terminal" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-900/60 text-slate-300">Core</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Python</h3>
+            <p class="text-xs sm:text-sm text-slate-300/80 leading-relaxed">Core algorithms, procedural scripting, data structures, and automation basics.</p>
+          </div>
+
+          <!-- AI -->
+          <div class="group p-5 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-indigo-500/50 transition-all hover:-translate-y-1">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20">
+                <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-900/60 text-slate-300">AI</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Artificial Intelligence</h3>
+            <p class="text-xs sm:text-sm text-slate-300/80 leading-relaxed">Core AI concepts, machine learning principles, and modern practical applications.</p>
+          </div>
+
+          <!-- Gen AI -->
+          <div class="group p-5 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-indigo-500/50 transition-all hover:-translate-y-1">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20">
+                <i data-lucide="sparkles" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-900/60 text-slate-300">Modern</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Generative AI</h3>
+            <p class="text-xs sm:text-sm text-slate-300/80 leading-relaxed">Prompt engineering, LLM integrations, AI coding assistants, and modern tooling.</p>
+          </div>
+
+          <!-- Web Dev -->
+          <div class="group p-5 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-indigo-500/50 transition-all hover:-translate-y-1">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20">
+                <i data-lucide="layout" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-900/60 text-slate-300">Full Flow</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Web Development</h3>
+            <p class="text-xs sm:text-sm text-slate-300/80 leading-relaxed">Building responsive, mobile-first, and high-performance user interfaces.</p>
+          </div>
+
+          <!-- Digital Productivity -->
+          <div class="group p-5 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-indigo-500/50 transition-all hover:-translate-y-1">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20">
+                <i data-lucide="zap" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-900/60 text-slate-300">Workflow</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Digital Productivity</h3>
+            <p class="text-xs sm:text-sm text-slate-300/80 leading-relaxed">Workflow optimization, developer environments, task automation, and digital setups.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="py-20 relative bg-slate-900/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center text-center mb-14">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-semibold uppercase tracking-wider mb-3">
+            <i data-lucide="folder-git-2" class="w-3.5 h-3.5"></i>
+            <span>Featured Work</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Projects & Practical Builds</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="rounded-2xl bg-slate-800/60 border border-slate-700/60 p-6 flex flex-col justify-between hover:border-indigo-500/50 transition-all hover:-translate-y-1">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-11 h-11 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20">
+                  <i data-lucide="code" class="w-5 h-5"></i>
+                </div>
+                <a href="https://github.com/atharvcharan03-cpu" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg text-slate-400 hover:text-white bg-slate-900/40 transition-colors">
+                  <i data-lucide="github" class="w-4 h-4"></i>
+                </a>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Personal Portfolio Website</h3>
+              <p class="text-sm text-slate-300/80 leading-relaxed mb-6">
+                A fast, modern, and accessible personal portfolio website built with React, Vite, and Tailwind CSS. Features dynamic theming and responsive design.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-900 text-indigo-300">React</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-900 text-indigo-300">Vite</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-900 text-indigo-300">Tailwind CSS</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-900 text-indigo-300">JavaScript</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-700/50 flex items-center justify-between">
+              <!-- Edit live URL here or in src/data/portfolioData.js -->
+              <a href="#" onclick="alert('Demo placeholder link. You can update this live URL anytime in src/data/portfolioData.js!'); return false;" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-xs sm:text-sm">
+                <span>View Project</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+              <span class="text-[11px] text-slate-400 italic">Live Preview</span>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="rounded-2xl bg-slate-800/60 border border-slate-700/60 p-6 flex flex-col justify-between hover:border-indigo-500/50 transition-all hover:-translate-y-1">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-11 h-11 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20">
+                  <i data-lucide="code" class="w-5 h-5"></i>
+                </div>
+                <a href="https://github.com/atharvcharan03-cpu" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg text-slate-400 hover:text-white bg-slate-900/40 transition-colors">
+                  <i data-lucide="github" class="w-4 h-4"></i>
+                </a>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">AI Website Project</h3>
+              <p class="text-sm text-slate-300/80 leading-relaxed mb-6">
+                An exploratory web platform integrating modern artificial intelligence tools and prompt processing for automated workflows.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-900 text-indigo-300">Python</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-900 text-indigo-300">AI Integration</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-900 text-indigo-300">REST APIs</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-700/50 flex items-center justify-between">
+              <!-- Edit live URL here or in src/data/portfolioData.js -->
+              <a href="#" onclick="alert('Demo placeholder link. You can update this live URL anytime in src/data/portfolioData.js!'); return false;" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-xs sm:text-sm">
+                <span>View Project</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+              <span class="text-[11px] text-slate-400 italic">Live Preview</span>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="rounded-2xl bg-slate-800/60 border border-slate-700/60 p-6 flex flex-col justify-between hover:border-indigo-500/50 transition-all hover:-translate-y-1">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-11 h-11 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20">
+                  <i data-lucide="code" class="w-5 h-5"></i>
+                </div>
+                <a href="https://github.com/atharvcharan03-cpu" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg text-slate-400 hover:text-white bg-slate-900/40 transition-colors">
+                  <i data-lucide="github" class="w-4 h-4"></i>
+                </a>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Student Productivity Project</h3>
+              <p class="text-sm text-slate-300/80 leading-relaxed mb-6">
+                A digital productivity platform tailored for university students to track coursework, organize study routines, and optimize study sessions.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-900 text-indigo-300">JavaScript</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-900 text-indigo-300">HTML/CSS</span>
+                <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-900 text-indigo-300">UI/UX</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-700/50 flex items-center justify-between">
+              <!-- Edit live URL here or in src/data/portfolioData.js -->
+              <a href="#" onclick="alert('Demo placeholder link. You can update this live URL anytime in src/data/portfolioData.js!'); return false;" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-xs sm:text-sm">
+                <span>View Project</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+              <span class="text-[11px] text-slate-400 italic">Live Preview</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- See more on GitHub CTA -->
+        <div class="mt-14 text-center">
+          <a href="https://github.com/atharvcharan03-cpu" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-semibold text-sm border border-slate-700 shadow-md transition-all">
+            <i data-lucide="github" class="w-4 h-4 text-indigo-400"></i>
+            <span>See more on GitHub</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ACHIEVEMENTS ================= -->
+    <section id="achievements" class="py-20 relative">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center text-center mb-12">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-semibold uppercase tracking-wider mb-3">
+            <i data-lucide="trophy" class="w-3.5 h-3.5"></i>
+            <span>Milestones & Recognition</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Achievements & Learning Badges</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full mt-4"></div>
+        </div>
+
+        <!-- Categories -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+          <span class="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-indigo-600 text-white">Certifications</span>
+          <span class="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800/60 text-slate-300">Hackathons</span>
+          <span class="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800/60 text-slate-300">Courses</span>
+          <span class="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800/60 text-slate-300">Awards</span>
+          <span class="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800/60 text-slate-300">Other Achievements</span>
+        </div>
+
+        <!-- Empty State Card -->
+        <div class="max-w-2xl mx-auto rounded-2xl bg-slate-800/40 border border-slate-700/60 p-8 sm:p-12 text-center shadow-xl">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center">
+            <i data-lucide="sparkles" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Milestones Coming Soon</h3>
+          <p class="text-slate-300/90 text-sm sm:text-base leading-relaxed mb-6 max-w-lg mx-auto">
+            Currently in my 1st semester of B.Tech CSE! I am actively preparing for hackathons, pursuing technical certifications, and building practical projects.
+          </p>
+          <div class="inline-flex items-center gap-2 p-3.5 rounded-xl bg-slate-900/60 border border-slate-700/60 text-xs text-slate-400">
+            <i data-lucide="plus-circle" class="w-4 h-4 text-indigo-400"></i>
+            <span>Add entries anytime in <code class="text-indigo-300">src/data/achievements.js</code></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="py-20 relative bg-slate-900/60">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center text-center mb-12">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-semibold uppercase tracking-wider mb-3">
+            <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+            <span>Get In Touch</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Let's Connect & Collaborate</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full mt-4"></div>
+          <p class="mt-4 text-slate-300 max-w-lg text-sm sm:text-base">
+            I am always interested in discussing software engineering opportunities, internships, student projects, or exciting tech ideas.
+          </p>
+        </div>
+
+        <div class="relative rounded-3xl bg-slate-800/80 border border-slate-700/80 p-8 sm:p-12 shadow-2xl backdrop-blur-sm">
+          <!-- Email Box -->
+          <div class="mb-10 p-6 rounded-2xl bg-slate-900/70 border border-slate-700/60 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <div class="text-left">
+                <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block">Official Email</span>
+                <a href="mailto:atharv.26bcon2726@jecrcu.edu.in" class="text-base sm:text-lg font-bold text-white hover:text-indigo-400 transition-colors break-all">
+                  atharv.26bcon2726@jecrcu.edu.in
+                </a>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-3 w-full sm:w-auto justify-center">
+              <a href="mailto:atharv.26bcon2726@jecrcu.edu.in" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs sm:text-sm shadow-md shadow-indigo-600/30 transition-all">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>Send Email</span>
+              </a>
+              <button id="copy-btn" onclick="copyEmail()" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs sm:text-sm border border-slate-700 transition-all">
+                <i id="copy-icon" data-lucide="copy" class="w-4 h-4 text-slate-400"></i>
+                <span id="copy-text">Copy email</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Social Profiles Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <a href="https://www.linkedin.com/in/atharv-jagawat-8827a7441" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 rounded-xl bg-slate-900/40 border border-slate-700/60 hover:border-indigo-500/50 transition-all group">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-600/10 text-blue-400 flex items-center justify-center">
+                  <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </div>
+                <div class="text-left">
+                  <h4 class="text-sm font-bold text-white group-hover:text-indigo-400">LinkedIn</h4>
+                  <p class="text-xs text-slate-400">atharv-jagawat-8827a7441</p>
+                </div>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-500 group-hover:text-white"></i>
+            </a>
+
+            <a href="https://github.com/atharvcharan03-cpu" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 rounded-xl bg-slate-900/40 border border-slate-700/60 hover:border-indigo-500/50 transition-all group">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-slate-700/20 text-slate-300 flex items-center justify-center">
+                  <i data-lucide="github" class="w-5 h-5"></i>
+                </div>
+                <div class="text-left">
+                  <h4 class="text-sm font-bold text-white group-hover:text-indigo-400">GitHub</h4>
+                  <p class="text-xs text-slate-400">atharvcharan03-cpu</p>
+                </div>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-500 group-hover:text-white"></i>
+            </a>
+          </div>
+
+          <!-- Location Badge -->
+          <div class="flex items-center justify-center gap-2 text-xs text-slate-400 pt-2">
+            <i data-lucide="map-pin" class="w-4 h-4 text-indigo-400"></i>
+            <span>Based in Jaipur, India • JECRC University Campus</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-slate-800 bg-slate-950 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex flex-col sm:items-start items-center text-center sm:text-left">
+          <div class="flex items-center gap-2 mb-1">
+            <div class="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-xs">AJ</div>
+            <span class="font-bold text-slate-100 text-base">Atharv Jagawat</span>
+          </div>
+          <p class="text-xs text-slate-400">© 2026 Atharv Jagawat. All rights reserved.</p>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a href="https://github.com/atharvcharan03-cpu" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="p-2.5 rounded-xl bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-colors">
+            <i data-lucide="github" class="w-4 h-4"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/atharv-jagawat-8827a7441" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="p-2.5 rounded-xl bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-colors">
+            <i data-lucide="linkedin" class="w-4 h-4"></i>
+          </a>
+          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-900 text-slate-300 hover:text-indigo-400 border border-slate-800 text-xs font-semibold transition-all">
+            <span>Back to Top</span>
+            <i data-lucide="arrow-up" class="w-3.5 h-3.5 text-indigo-400"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Toggle Mobile Menu
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.add('hidden');
+    }
+
+    // Copy Email to clipboard with visual feedback
+    function copyEmail() {
+      const email = 'atharv.26bcon2726@jecrcu.edu.in';
+      navigator.clipboard.writeText(email).then(() => {
+        const text = document.getElementById('copy-text');
+        text.innerText = 'Copied!';
+        text.className = 'text-emerald-400 font-bold';
+        setTimeout(() => {
+          text.innerText = 'Copy email';
+          text.className = '';
+        }, 2500);
+      });
+    }
+
+    // Toggle Light / Dark Mode
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        document.body.classList.remove('bg-slate-900', 'text-slate-100');
+        document.body.classList.add('bg-slate-50', 'text-slate-900');
+      } else {
+        html.classList.add('dark');
+        document.body.classList.remove('bg-slate-50', 'text-slate-900');
+        document.body.classList.add('bg-slate-900', 'text-slate-100');
+      }
+    }
+  </script>
+</body>
+</html>
